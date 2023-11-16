@@ -1,0 +1,4 @@
+/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /mnt/e/7.EDA_Competation/Project
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /mnt/e/7.EDA_Competation/Project/cmake-build-debug-wsl

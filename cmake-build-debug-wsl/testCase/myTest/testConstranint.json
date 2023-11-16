@@ -1,0 +1,23 @@
+{
+  "variable_list": [
+    {
+      "id": 0,
+      "name": "var_0",
+      "signed": false,
+      "bit_width": 4
+    }
+  ],
+  "constraint_list": [
+    {
+      "op": "SUB",
+      "lhs_expression": {
+        "op": "VAR",
+        "id": 0
+      },
+      "rhs_expression": {
+        "op": "CONST",
+        "value": "5'h2"
+      }
+    }
+  ]
+}
