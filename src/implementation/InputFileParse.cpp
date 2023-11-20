@@ -169,12 +169,12 @@ void inputParse(vector<jsons::Var> &vars, vector<jsons::BiTNode> &T, const strin
     jfile >> j;
 
     // 读取变量列表
+    cout << "variable_list: " << endl;
     size_t vars_size = j["variable_list"].size();
     cout << "vars_list_size = " << vars_size << endl;
-    cout << "打印变量列表：" << endl;
     for (int i = 0; i < vars_size; i ++){
         vars.push_back(j["variable_list"][i]);
-        printf("变量%d：id=%d, name=%s, signed=%d, bit_width=%d\n",
+        printf("variable%d：id=%d, name=%s, signed=%d, bit_width=%d\n",
                i, vars[i].id, vars[i].name.c_str(), vars[i].isSign, vars[i].bit_width);
     }
     cout << endl;
@@ -192,11 +192,11 @@ void inputParse(vector<jsons::Var> &vars, vector<jsons::BiTNode> &T, const strin
     }
 
     // 输出约束
-    cout << "打印约束列表：" << endl;
+    cout << "constraint_list: " << endl;
     cout << "constraint_list_size = " << constrains_size << endl;
 
     for (int i = 0; i < constrains_size; i++ ){
-        cout << "约束" << i << ": ";
+        cout << "constraint" << i << ": ";
         printConstrainTree(&T[i], vars, i);
         cout << endl;
     }

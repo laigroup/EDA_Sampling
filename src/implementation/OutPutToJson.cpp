@@ -44,9 +44,10 @@ void bvcToNum(const vector<jsons::Var>& vars, vector<string>& res){
 void toJsonFormat(Cudd& mgr, BDD& ans, const vector<jsons::Var>& vars, int num, unsigned int seed, const string& outputFile){
     // 计算各个节点的模型数
     mpz_class modelCnt = countPath(&mgr, ans.getNode(), false);
-    cout << "模型数：" << modelCnt << endl;
-    cout << Cudd_CountPathsToNonZero(ans.getNode()) << endl;
-    cout << "结点个数：" << Cudd_DagSize(ans.getNode()) << endl;
+
+//    cout << "模型数：" << modelCnt << endl;
+//    cout << Cudd_CountPathsToNonZero(ans.getNode()) << endl;
+//    cout << "结点个数：" << Cudd_DagSize(ans.getNode()) << endl;
 
     // 进行采样并且将结果存入json对象
     json j;

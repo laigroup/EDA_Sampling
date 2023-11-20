@@ -98,5 +98,4 @@ mpz_class countPath(Cudd* mgr, DdNode* node, bool toOne);
 void simpling(Cudd* mgr, DdNode* node, std::mt19937 &gen, std::uniform_real_distribution<> &dis, int count);
 
 
-
 #endif //PROJECT_SAMPLING_H

@@ -88,7 +88,7 @@ BDD getConjunctiveRes(Cudd& mgr, const vector<jsons::BiTNode>& T, const vector<v
 //        testConstraint(mgr, tmp, assignments, vars, testFile);
 
         ans = ans & tmp; // 约束间合取
-        cout << "合取第" << constraint_num ++ << "个约束成功！" << endl;
+        cout << "Successful conjunction: constraint " << constraint_num ++ << endl;
     }
 //    testFile.close();
     return ans;
@@ -149,6 +149,7 @@ int main(int argc, char* argv[]){
 
     string constraintFile; // 约束文件
     string outputFile; // 采样结果文件
+
     size_t seed = 0U;
     int sampleCnt = 1000;
 
@@ -222,9 +223,6 @@ int main(int argc, char* argv[]){
 
     Cudd mgr;
 
-    constraintFile = "constraint.json";
-    outputFile = "result.json";
-
     vector<jsons::Var> vars; // 变量列表
     vector<jsons::BiTNode> T; // 约束树
     inputParse(vars, T, constraintFile); // 读取约束文件构建约束树和变量数组
@@ -241,7 +239,7 @@ int main(int argc, char* argv[]){
     for (const auto& var : vars){
         sumWidth += var.bit_width;
     }
-    cout << "sumWidth:" << sumWidth << endl;
+//    cout << "sumWidth:" << sumWidth << endl;
 
     // 选择最优排序策略 TODO
     Cudd_AutodynEnable(mgr.getManager(), CUDD_REORDER_SIFT);
@@ -253,11 +251,15 @@ int main(int argc, char* argv[]){
 
     // 统计各节点的可满足路径数，及各个节点走左分支的概率
     BDD ans = getConjunctiveRes(mgr, T, varsBdd, vars, constraintFile);
-    cout << "结点个数：" << Cudd_DagSize(ans.getNode()) << endl;
+
+//    writeDotFile(mgr, ans, "");
+
+//    cout << "node num: " << Cudd_DagSize(ans.getNode()) << endl;
     // 将采样结果输出到json文件
     toJsonFormat(mgr, ans, vars, sampleCnt, seed, outputFile);
     clock_t end = clock();
-    cout << "运行时间：" << (double)(end-start)/CLOCKS_PER_SEC << endl;
+    cout << "running time: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
+    cout << endl;
     return 0;
 }
 

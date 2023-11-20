@@ -49,6 +49,7 @@ void bvc_Sub(Cudd &mgr, vector<BDD> const& lhs, vector<BDD> const& rhs, vector<B
     }
 }
 
+// TODO 未测试正确性
 void bvc_Minus(Cudd &mgr, vector<BDD> const& lhs, vector<BDD>& res, jsons::BiTNode* T){
 
     size_t lhs_bitNum = T->lhs->bit_width;

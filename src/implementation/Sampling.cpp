@@ -1,5 +1,6 @@
 #include "../interface/Sampling.h"
 #include <unordered_set>
+#include <cmath>
 
 using nlohmann::json;
 using namespace std;
@@ -30,6 +31,7 @@ testFile为输出文件
 函数返回经过根节点的可满足的路径数
 */
 mpz_class countPath(Cudd* mgr, DdNode* node, bool toOne){
+
     if (Cudd_IsConstant(node)){ // 到达叶子结点
         if (toOne){ // 若要计算到1的路径数
             return 1;
@@ -38,7 +40,7 @@ mpz_class countPath(Cudd* mgr, DdNode* node, bool toOne){
         }
     }
 
-    unsigned long varIndex = Cudd_NodeReadIndex(node); // 获取当前节点的索引
+    size_t varIndex = Cudd_NodeReadIndex(node); // 获取当前节点的索引
     DdNode* lowNode = Cudd_E(node);
     DdNode* highNode = Cudd_T(node);
     auto nodeLabel = NodeLabel(varIndex, lowNode, highNode);
@@ -56,6 +58,46 @@ mpz_class countPath(Cudd* mgr, DdNode* node, bool toOne){
     highToOnePath[nodeLabel] = countPath(mgr, highNode, true); // 右侧结点到1的路径数
     highToZeroPath[nodeLabel] = countPath(mgr, highNode, false); // 右侧结点到0的路径数
 
+    if (Cudd_IsConstant(lowNode)){ // 还原归约后隐藏的边
+        int level = Cudd_ReadPerm(mgr->getManager(), varIndex);
+        if (level != sumWidth){
+            unsigned int m = sumWidth - level;
+
+//            cout << "所在层：" << level << endl;
+//            cout << "变量号：" << varIndex << endl;
+//            cout << "左侧隐藏变量数：" << m << endl;
+
+            mpz_class sum = 1;
+            for (int i = 0; i < m; ++ i){
+                sum *= 2;
+            }
+            lowToOnePath[nodeLabel] = sum;
+
+//            cout << "左侧隐藏路径数：" << sum << endl;
+//            cout << endl;
+        }
+    }
+
+    if (Cudd_IsConstant(highNode)){
+        int level = Cudd_ReadPerm(mgr->getManager(), varIndex);
+        if (level != sumWidth){
+            unsigned int m = sumWidth - level;
+
+//            cout << "所在层：" << level << endl;
+//            cout << "变量号：" << varIndex << endl;
+//            cout << "右侧隐藏变量数：" << m << endl;
+
+            mpz_class sum = 1;
+            for (int i = 0; i < m; ++ i){
+                sum *= 2;
+            }
+            highToOnePath[nodeLabel] = sum;
+
+//            cout << "右侧隐藏路径数：" << sum << endl;
+//            cout << endl;
+        }
+    }
+
     if (Cudd_IsComplement(lowNode)){ // 左分支为补边，则令左分支取反
         sumToOnePath[nodeLabel] = lowToZeroPath[nodeLabel] + highToOnePath[nodeLabel];
         sumToZeroPath[nodeLabel] = lowToOnePath[nodeLabel] + highToZeroPath[nodeLabel];
@@ -66,7 +108,7 @@ mpz_class countPath(Cudd* mgr, DdNode* node, bool toOne){
 
     visited.insert(nodeLabel);
 
-    cout << ++ nodeNum << endl;
+//    cout << ++ nodeNum << endl;
     if (toOne){
         return sumToOnePath[nodeLabel];
     }else{

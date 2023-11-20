@@ -482,19 +482,19 @@ with open(cons_prob_path) as fp1:
     json_prob = json.load(fp1)
 
 
-print("\nVariable definitions:")
+# print("\nVariable definitions:")
 i = 0
 for var in json_prob['variable_list']:
     var_obj = Variable(var['id'], var['name'], var['signed'], var['bit_width'])
     variable_list.append(var_obj)
-    variable_list[i].print_def()
+    # variable_list[i].print_def()
     i = i + 1
 
-print("\nConstraints:")
+# print("\nConstraints:")
 for cons in json_prob['constraint_list']:
     cons_obj = Expression.create(cons)
     constraint_list.append(cons_obj)
-    print(cons_obj.to_str())
+    # print(cons_obj.to_str())
 
 
 assign_path = options.assign
@@ -507,13 +507,13 @@ fail_count = 0
 for assignment in json_assign['assignment_list']:
     i = 0
     a = ""
-    print("\nAssignment %d:" % (assign_count,))
+    # print("\nAssignment %d:" % (assign_count,))
     for one_assign in assignment:
         variable_list[i]._val = int(one_assign['value'], 16)
         #val_arr = one_assign['value'].split("'h", 1)
         #variable_list[i]._val = int(val_arr[1], 16)
 
-        variable_list[i].print_assign()
+        # variable_list[i].print_assign()
         a += "%x " % (variable_list[i]._val)
         i+=1
     if assignment_list.get(a) is None:
@@ -521,13 +521,13 @@ for assignment in json_assign['assignment_list']:
     else:
         duplicate_count += 1
     '''print("\nAssignment string:\n%s" %(a,))'''
-    print("\nConstraints are evaluated as below:")
+    # print("\nConstraints are evaluated as below:")
     failed = 0
     for cons in constraint_list:
         cons.annotate_width_1()
         cons.annotate_width_2()
         result = not(not(cons.eval()))
-        print("%s : %x" % (cons.to_type_str(), result))
+        # print("%s : %x" % (cons.to_type_str(), result))
         if result == 0:
             failed = 1
     assign_count += 1
@@ -536,10 +536,10 @@ for assignment in json_assign['assignment_list']:
 
 if fail_count == 0:
     if duplicate_count == 0:
-        print("\nPASS, duplicate assignments:%d, score:%f" %(duplicate_count, 100))
+        print("PASS, duplicate assignments:%d, score:%f\n\n" %(duplicate_count, 100))
     else:
-        print("\nPASS, duplicate assignments:%d, score:%f" %(duplicate_count, 100 * ((assign_count - duplicate_count) / assign_count)))
+        print("PASS, duplicate assignments:%d, score:%f\n\n" %(duplicate_count, 100 * ((assign_count - duplicate_count) / assign_count)))
 else:
-    print("\nFAIL, failed count:%d" %(fail_count,))
+    print("FAIL, failed count:%d\n\n" %(fail_count,))
 
 
