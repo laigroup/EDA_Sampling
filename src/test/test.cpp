@@ -128,7 +128,7 @@ template <class Type> Type stringToNum(const string& str) {
     istringstream iss(str);
     Type num;
     iss >> num;
-    return num;
+    return num;/
 }
 
 void print_usage(const char* name)
@@ -251,15 +251,23 @@ int main(int argc, char* argv[]){
 
     // 统计各节点的可满足路径数，及各个节点走左分支的概率
     BDD ans = getConjunctiveRes(mgr, T, varsBdd, vars, constraintFile);
+    cout << endl;
 
 //    writeDotFile(mgr, ans, "");
 
-//    cout << "node num: " << Cudd_DagSize(ans.getNode()) << endl;
     // 将采样结果输出到json文件
     toJsonFormat(mgr, ans, vars, sampleCnt, seed, outputFile);
     clock_t end = clock();
-    cout << "running time: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
-    cout << endl;
+
+    ofstream logFile;
+    logFile.open("./log_file.txt", ios::app);
+    logFile << "constraint file: " << constraintFile << endl;
+    logFile << "node num: " << Cudd_DagSize(ans.getNode()) << endl;
+    logFile << "paths to nonZero num: " << Cudd_CountPathsToNonZero(ans.getNode()) << endl;
+    logFile << "running time: " << (double)(end-start)/CLOCKS_PER_SEC << endl;
+    logFile << endl;
+    logFile.close();
+
     return 0;
 }
 

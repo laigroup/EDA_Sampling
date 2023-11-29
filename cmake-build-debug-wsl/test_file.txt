@@ -1,0 +1,81 @@
+
+Problem file: ./testCase/complex/n25_m25_b4-32_t109.8/constraint.json, assignment file: ./SamplingResult/complex/result_n25_m25_b4-32_t109.8.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n25_m25_b4-32_t168.7/constraint.json, assignment file: ./SamplingResult/complex/result_n25_m25_b4-32_t168.7.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n25_m25_b4-32_t183.9/constraint.json, assignment file: ./SamplingResult/complex/result_n25_m25_b4-32_t183.9.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n30_m30_b4-32_t132.4/constraint.json, assignment file: ./SamplingResult/complex/result_n30_m30_b4-32_t132.4.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n35_m35_b4-16_t113.9/constraint.json, assignment file: ./SamplingResult/complex/result_n35_m35_b4-16_t113.9.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n35_m35_b4-16_t93.2/constraint.json, assignment file: ./SamplingResult/complex/result_n35_m35_b4-16_t93.2.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n40_m40_b4-8_t102.9/constraint.json, assignment file: ./SamplingResult/complex/result_n40_m40_b4-8_t102.9.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n40_m40_b4-8_t85.7/constraint.json, assignment file: ./SamplingResult/complex/result_n40_m40_b4-8_t85.7.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/complex/n50_m50_b4-16_t99.0/constraint.json, assignment file: ./SamplingResult/complex/result_n50_m50_b4-16_t99.0.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n20_m20_b16-32_t39.7/constraint.json, assignment file: ./SamplingResult/medium/result_n20_m20_b16-32_t39.7.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n20_m20_b4-64_t32.8/constraint.json, assignment file: ./SamplingResult/medium/result_n20_m20_b4-64_t32.8.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n20_m20_b4-64_t39.2/constraint.json, assignment file: ./SamplingResult/medium/result_n20_m20_b4-64_t39.2.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n20_m20_b4-64_t43.1/constraint.json, assignment file: ./SamplingResult/medium/result_n20_m20_b4-64_t43.1.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n25_m25_b4-32_t51.3/constraint.json, assignment file: ./SamplingResult/medium/result_n25_m25_b4-32_t51.3.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n30_m30_b4-32_t21.3/constraint.json, assignment file: ./SamplingResult/medium/result_n30_m30_b4-32_t21.3.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n30_m30_b4-32_t65.9/constraint.json, assignment file: ./SamplingResult/medium/result_n30_m30_b4-32_t65.9.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n35_m35_b4-16_t34.6/constraint.json, assignment file: ./SamplingResult/medium/result_n35_m35_b4-16_t34.6.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/medium/n50_m50_b4-8_t31.1/constraint.json, assignment file: ./SamplingResult/medium/result_n50_m50_b4-8_t31.1.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n10_m10_b4-32_t0.051/constraint.json, assignment file: ./SamplingResult/simple/result_n10_m10_b4-32_t0.051.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n10_m10_b4-32_t0.0516/constraint.json, assignment file: ./SamplingResult/simple/result_n10_m10_b4-32_t0.0516.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n10_m10_b4-32_t0.0518/constraint.json, assignment file: ./SamplingResult/simple/result_n10_m10_b4-32_t0.0518.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n10_m10_b4-32_t0.053/constraint.json, assignment file: ./SamplingResult/simple/result_n10_m10_b4-32_t0.053.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n10_m15_b32-64_t0.8/constraint.json, assignment file: ./SamplingResult/simple/result_n10_m15_b32-64_t0.8.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n20_m20_b16-32_t13.7/constraint.json, assignment file: ./SamplingResult/simple/result_n20_m20_b16-32_t13.7.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n20_m20_b4-64_t1.6/constraint.json, assignment file: ./SamplingResult/simple/result_n20_m20_b4-64_t1.6.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n50_m50_b4-8_t4.3/constraint.json, assignment file: ./SamplingResult/simple/result_n50_m50_b4-8_t4.3.json
+PASS, duplicate assignments:0, score:100.000000
+
+Problem file: ./testCase/simple/n5_m8_b8-16_t0.0311/constraint.json, assignment file: ./SamplingResult/simple/result_n5_m8_b8-16_t0.0311.json
+PASS, duplicate assignments:0, score:100.000000

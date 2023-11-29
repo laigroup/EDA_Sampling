@@ -45,7 +45,7 @@ void toJsonFormat(Cudd& mgr, BDD& ans, const vector<jsons::Var>& vars, int num, 
     // 计算各个节点的模型数
     mpz_class modelCnt = countPath(&mgr, ans.getNode(), false);
 
-//    cout << "模型数：" << modelCnt << endl;
+//    cout << "model num：" << modelCnt << endl;
 //    cout << Cudd_CountPathsToNonZero(ans.getNode()) << endl;
 //    cout << "结点个数：" << Cudd_DagSize(ans.getNode()) << endl;
 

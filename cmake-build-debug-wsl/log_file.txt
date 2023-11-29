@@ -1,0 +1,135 @@
+constraint file: ./testCase/complex/n25_m25_b4-32_t109.8/constraint.json
+node num: 4741
+paths to nonZero num: 1.55346e+23
+running time: 0.883886
+
+constraint file: ./testCase/complex/n25_m25_b4-32_t168.7/constraint.json
+node num: 3010
+paths to nonZero num: 8.56291e+32
+running time: 1.80391
+
+constraint file: ./testCase/complex/n25_m25_b4-32_t183.9/constraint.json
+node num: 70502
+paths to nonZero num: 5.3835e+33
+running time: 20.8085
+
+constraint file: ./testCase/complex/n30_m30_b4-32_t132.4/constraint.json
+node num: 33461
+paths to nonZero num: 5.5595e+24
+running time: 6.96708
+
+constraint file: ./testCase/complex/n35_m35_b4-16_t113.9/constraint.json
+node num: 31056
+paths to nonZero num: 1.8161e+20
+running time: 13.8097
+
+constraint file: ./testCase/complex/n35_m35_b4-16_t93.2/constraint.json
+node num: 51385
+paths to nonZero num: 1.13492e+35
+running time: 11.1311
+
+constraint file: ./testCase/complex/n40_m40_b4-8_t102.9/constraint.json
+node num: 2972
+paths to nonZero num: 8.24314e+16
+running time: 0.491929
+
+constraint file: ./testCase/complex/n40_m40_b4-8_t85.7/constraint.json
+node num: 1599
+paths to nonZero num: 1.97614e+25
+running time: 0.510333
+
+constraint file: ./testCase/complex/n50_m50_b4-16_t99.0/constraint.json
+node num: 9270
+paths to nonZero num: 5.05336e+38
+running time: 1.66541
+
+constraint file: ./testCase/medium/n20_m20_b16-32_t39.7/constraint.json
+node num: 2324
+paths to nonZero num: 1.65604e+26
+running time: 2.4456
+
+constraint file: ./testCase/medium/n20_m20_b4-64_t32.8/constraint.json
+node num: 2901
+paths to nonZero num: 1.07909e+28
+running time: 2.77324
+
+constraint file: ./testCase/medium/n20_m20_b4-64_t39.2/constraint.json
+node num: 21591
+paths to nonZero num: 1.3162e+28
+running time: 9.43203
+
+constraint file: ./testCase/medium/n20_m20_b4-64_t43.1/constraint.json
+node num: 7267
+paths to nonZero num: 2.5805e+35
+running time: 1.69745
+
+constraint file: ./testCase/medium/n25_m25_b4-32_t51.3/constraint.json
+node num: 2942
+paths to nonZero num: 7.00592e+30
+running time: 1.00954
+
+constraint file: ./testCase/medium/n30_m30_b4-32_t21.3/constraint.json
+node num: 17595
+paths to nonZero num: 2.70644e+39
+running time: 2.17895
+
+constraint file: ./testCase/medium/n30_m30_b4-32_t65.9/constraint.json
+node num: 100427
+paths to nonZero num: 2.0966e+21
+running time: 32.2945
+
+constraint file: ./testCase/medium/n35_m35_b4-16_t34.6/constraint.json
+node num: 7480
+paths to nonZero num: 7.59997e+32
+running time: 1.16589
+
+constraint file: ./testCase/medium/n50_m50_b4-8_t31.1/constraint.json
+node num: 3363
+paths to nonZero num: 1.9767e+24
+running time: 0.705322
+
+constraint file: ./testCase/simple/n10_m10_b4-32_t0.051/constraint.json
+node num: 1009
+paths to nonZero num: 2.69461e+12
+running time: 0.187598
+
+constraint file: ./testCase/simple/n10_m10_b4-32_t0.0516/constraint.json
+node num: 776
+paths to nonZero num: 1.50822e+06
+running time: 0.096815
+
+constraint file: ./testCase/simple/n10_m10_b4-32_t0.0518/constraint.json
+node num: 806
+paths to nonZero num: 1.37219e+20
+running time: 0.240271
+
+constraint file: ./testCase/simple/n10_m10_b4-32_t0.053/constraint.json
+node num: 290
+paths to nonZero num: 1.97831e+07
+running time: 0.106694
+
+constraint file: ./testCase/simple/n10_m15_b32-64_t0.8/constraint.json
+node num: 3099
+paths to nonZero num: 2.10667e+40
+running time: 2.7192
+
+constraint file: ./testCase/simple/n20_m20_b16-32_t13.7/constraint.json
+node num: 31907
+paths to nonZero num: 1.39918e+32
+running time: 7.34905
+
+constraint file: ./testCase/simple/n20_m20_b4-64_t1.6/constraint.json
+node num: 77885
+paths to nonZero num: 4.63674e+34
+running time: 29.9295
+
+constraint file: ./testCase/simple/n50_m50_b4-8_t4.3/constraint.json
+node num: 2338
+paths to nonZero num: 1.40188e+27
+running time: 0.719172
+
+constraint file: ./testCase/simple/n5_m8_b8-16_t0.0311/constraint.json
+node num: 110
+paths to nonZero num: 1.61181e+06
+running time: 0.065898
+
